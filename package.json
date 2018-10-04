@@ -1,7 +1,7 @@
 {
   "name": "atomtoix",
   "main": "./lib/atomtoix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Atom Utility Belt. Text transformations, insertions and sorting",
   "keywords": [
     "transform",
@@ -16,20 +16,17 @@
     "email": "devpieces@a-bentofreire.com",
     "url": "https://github.com/a-bentofreire"
   },
-
   "homepage": "https://github.com/a-bentofreire/atomtoix",
   "bugs": "https://github.com/a-bentofreire/atomtoix/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/a-bentofreire/atomtoix"
   },
-
   "license": "SEE LICENSE IN LICENSE.txt",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {},
-
   "activationCommands": {
     "atom-workspace": [
       "IX:capitalize",
