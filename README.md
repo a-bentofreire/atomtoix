@@ -1,14 +1,14 @@
 # Atom Utility Belt
 
 Strap on the belt and become a Ninja Developer with these 25 utilities.  
-  
+
 This version is a port of [vsctoix](https://github.com/a-bentofreire/vsctoix) 1.1.
 except for the [selection Policies](#selection-policies), which in this version is more limited than vsctoix.
 
 ## Utilities
 
 * Transform Text Utilities
-   * Capitalize ```e.g. classNameFunc  ->  ClassNameFunc```
+   * Capitalize ```e.g. ClassNameFunc  ->  ClassNameFunc```
    * Camel Case ```e.g. ClassNameFunc  ->  classNameFunc```
    * Add Space before Uppercase - **Useful to transform functions names into documentation**  
  ```e.g. doActionBefore  ->  do Action Before```
@@ -27,7 +27,7 @@ except for the [selection Policies](#selection-policies), which in this version 
    * Header To Bookmark - **Converts markdown header text to Html Bookmark**  
  ```e.g. Is this the header 你好?  ->  is-this-the-header-你好```
    * Mixer - **Mixes the lines of different sections.**  
-  
+
 e.g.  
 >// section  
 >abc  
@@ -43,7 +43,7 @@ e.g.
 
 * Line Utilities
    * Remove Duplicated Lines - **Removes consecutive duplicated lines**  
-  
+
 e.g.  
 >first  
 >second  
@@ -62,7 +62,7 @@ e.g.
 >second  
 
    * Join Lines - **Joins lines adding the computed expression at the end of every line**  
-  
+
 e.g.  
 >red  
 >green  
@@ -70,7 +70,7 @@ e.g.
 >red(x0A),green(x0B)  
 
    * Split Lines - **Split lines by an expression. Dynamic values aren't supported**  
-  
+
 e.g.  
 >red,green  
 >-> expr: = \c{1}  
@@ -78,7 +78,7 @@ e.g.
 >green = 2  
 
    * Sort Numerically Ascending - **For each line uses the first number as sort key**  
-  
+
 e.g.  
 >10. red  
 >2. green  
