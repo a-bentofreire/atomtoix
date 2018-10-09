@@ -10,6 +10,10 @@ declare var atom;
 
 export namespace um {
 
+  // ------------------------------------------------------------------------
+  //                               Types
+  // ------------------------------------------------------------------------
+
   export enum TIXUtilityType {
     /// preforms inline transforms replacing pat with repl. doesn't calls ActionFunc
     utInTransform,
@@ -25,17 +29,38 @@ export namespace um {
     utInsertAtEndUtility,
   }
 
-  export function utilityManager(def, f?, up?) {
+  export enum TIXSelPolicy {
+    // FORCE policy must be the negative of the regular policy
+    ForceAll = -1,
+    All = 1,
+    Word,
+    Sentence,
+    Line,
+    None,
+    __Func,
+    ForceLine = -4,
+  }
+
+  interface UtilityManagerParams {
+    utilType: TIXUtilityType;
+    sp?: TIXSelPolicy;
+    pat?;
+    repl?;
+  }
+
+  export function utilityManager(params: UtilityManagerParams,
+    func?, up?): void {
+
     up = up || {};
     const editor = atom.workspace.getActiveTextEditor();
     if (editor) {
       const selection = editor.getSelectedText();
       let outSelection;
 
-      switch (def.utilType) {
+      switch (params.utilType) {
         case TIXUtilityType.utInTransform:
           if (selection) {
-            outSelection = selection.replace(def.pat, def.repl);
+            outSelection = selection.replace(params.pat, params.repl);
             if (selection !== outSelection) {
               editor.insertText(outSelection);
             }
@@ -45,7 +70,7 @@ export namespace um {
         case TIXUtilityType.utTransform:
           if (selection) {
             up.intext = selection;
-            outSelection = f(up);
+            outSelection = func(up);
             if (selection !== outSelection) {
               editor.insertText(outSelection);
             }
@@ -55,7 +80,7 @@ export namespace um {
         case TIXUtilityType.utLinesUtility:
           if (selection) {
             up.inlines = selection.split('\n');
-            outSelection = f(up).join('\n');
+            outSelection = func(up).join('\n');
             if (selection !== outSelection) {
               editor.insertText(outSelection);
             }
@@ -67,7 +92,7 @@ export namespace um {
             const lines = selection.split('\n');
             lines.forEach((line, index) => {
               up.intext = line;
-              lines[index] = f(up);
+              lines[index] = func(up);
             });
             outSelection = lines.join('\n');
             if (selection !== outSelection) {
@@ -77,7 +102,7 @@ export namespace um {
           break;
 
         case TIXUtilityType.utInsertAtEndUtility:
-          outSelection = f(selection);
+          outSelection = func(selection);
           editor.insertText(selection + outSelection);
           break;
       }
@@ -88,6 +113,4 @@ export namespace um {
 }
 
 declare var module;
-module.exports = {
-  um,
-};
+module.exports = { um };
