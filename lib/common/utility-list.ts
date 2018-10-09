@@ -16,14 +16,15 @@ function utilityList() {
   return {
     'IX:capitalize': () => transformutilities.capitalize(),
     'IX:camelCase': () => transformutilities.camelCase(),
+    'IX:dashCase': () => transformutilities.dashCase(),
     'IX:spaceByUpper': () => transformutilities.spaceByUpper(),
+    'IX:urlEncode': () => transformutilities.urlEncode(),
+    'IX:urlDecode': () => transformutilities.urlDecode(),
     'IX:reverseAssignment': () => transformutilities.reverseAssignment(),
     'IX:unixToWinSlash': () => transformutilities.unixToWinSlash(),
     'IX:winToUnixSlash': () => transformutilities.winToUnixSlash(),
     'IX:singleToDoubleSlash': () => transformutilities.singleToDoubleSlash(),
     'IX:doubleToSingleSlash': () => transformutilities.doubleToSingleSlash(),
-    'IX:urlEncode': () => transformutilities.urlEncode(),
-    'IX:urlDecode': () => transformutilities.urlDecode(),
     'IX:regnize': () => transformutilities.regnize(),
     'IX:headerToBookmark': () => transformutilities.headerToBookmark(),
     'IX:mixer': () => transformutilities.mixer(),
@@ -38,6 +39,6 @@ function utilityList() {
     'IX:insertISOTimeDate': () => insertutilities.insertISOTimeDate(),
     'IX:insertUUID': () => insertutilities.insertUUID(),
     'IX:insertTextAtEnd': () => insertutilities.insertTextAtEnd(),
-    'IX:insertTextAtStart': () => insertutilities.insertTextAtStart(),
+    'IX:insertTextAtStart': () => insertutilities.insertTextAtStart()
   };
 }

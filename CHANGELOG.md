@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - (DEV) Move atomtoix code to a common to vsctoix to a folder.
 > With this change, atomtoix and vsctoix share most of the code making it easier
 > to upgrade all products.  
+- (DEV) Changed utility list creation on README/package/utility-list.
+> Now it uses vsctoix `gen-utilities-data` script.  
+
 ### Added
 - Add utiliy `dashCase`.
 

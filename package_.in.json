@@ -32,35 +32,10 @@
   "scripts": {
     "gen-utilities-data": "cd tools && node gen-utilities-data.js"
   },
-  "WARNING": "----- This file is generated automatically by npm run gen-utilities-data ------",
+  "WARNING": "----- __AUTO_GEN_WARN__ ------",
   "activationCommands": {
     "atom-workspace": [
-            "IX:capitalize",
-      "IX:camelCase",
-      "IX:dashCase",
-      "IX:spaceByUpper",
-      "IX:urlEncode",
-      "IX:urlDecode",
-      "IX:reverseAssignment",
-      "IX:unixToWinSlash",
-      "IX:winToUnixSlash",
-      "IX:singleToDoubleSlash",
-      "IX:doubleToSingleSlash",
-      "IX:regnize",
-      "IX:headerToBookmark",
-      "IX:mixer",
-      "IX:removeDuplicatedLines",
-      "IX:removeEmptyLines",
-      "IX:joinLines",
-      "IX:splitLines",
-      "IX:sortNumericallyAscending",
-      "IX:indentOneSpace",
-      "IX:outdentOneSpace",
-      "IX:insertISODate",
-      "IX:insertISOTimeDate",
-      "IX:insertUUID",
-      "IX:insertTextAtEnd",
-      "IX:insertTextAtStart"
+      "__COMMANDS__"
     ]
   }
 }
