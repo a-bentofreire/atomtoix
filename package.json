@@ -1,7 +1,7 @@
 {
   "name": "atomtoix",
   "main": "./lib/atomtoix",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "urlencode,change slash,camel case,del duplicates, and much more...",
   "keywords": [
     "transform",
@@ -35,7 +35,7 @@
   "WARNING": "----- This file is generated automatically by npm run gen-utilities-data ------",
   "activationCommands": {
     "atom-workspace": [
-            "IX:capitalize",
+      "IX:capitalize",
       "IX:camelCase",
       "IX:dashCase",
       "IX:spaceByUpper",
