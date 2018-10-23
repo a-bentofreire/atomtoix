@@ -1,6 +1,6 @@
 # Atom Utility Belt
 
-Strap on the belt and become a Ninja Developer with these 25 utilities.  
+Strap on the belt and become a Ninja Developer with these 26 utilities.  
 
 This version is a port of [vsctoix](https://github.com/a-bentofreire/vsctoix) 1.1.
 except for the [selection Policies](#selection-policies), which in this version is more limited than vsctoix.  
